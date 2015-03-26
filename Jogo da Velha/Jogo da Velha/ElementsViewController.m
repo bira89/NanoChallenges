@@ -41,9 +41,13 @@
     [super viewDidLoad];
     UIImage *new = [UIImage imageNamed:@"empty.png"];
     UIImage *newX = [UIImage imageNamed:@"imageX.png"];
+    UIImage *newX2 = [UIImage imageNamed:@"imageX2.png"];
     UIImage *newO = [UIImage imageNamed:@"imageO.png"];
+    UIImage *newO2 = [UIImage imageNamed:@"imageO2.png"];
+    
     self.imageButtons = @[new, newO, newX];
-    [self.playerX setImage:newX];
+    self.player = @[newX, newX2, newO, newO2];
+    [self.playerX setImage:newX2];
     [self.playerO setImage:newO];
 }
 
@@ -280,6 +284,14 @@
 {
     
     jogadorAtual = jogadorAtual == 1  ? 2 : 1;
+    if(jogadorAtual==1){
+        [self.playerX setImage: [self.player objectAtIndex: jogadorAtual]];
+        [self.playerO setImage: [self.player objectAtIndex: jogadorAtual+1]];
+    }
+    if (jogadorAtual==2) {
+        [self.playerX setImage: [self.player objectAtIndex: jogadorAtual-2]];
+        [self.playerO setImage: [self.player objectAtIndex: jogadorAtual+1]];
+    }
 
     return jogadorAtual;
 }
