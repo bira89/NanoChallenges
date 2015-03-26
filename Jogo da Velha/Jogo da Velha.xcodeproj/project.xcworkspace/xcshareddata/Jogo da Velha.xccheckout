@@ -10,6 +10,8 @@
 	<string>Jogo da Velha</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>200DDBF1414C4C1AB8D97AA58178C22A93408E51</key>
+		<string>https://github.com/bira89/NanoChallenges.git</string>
 		<key>F43D3E137651682FC0942D9E0252E6B4657E07D4</key>
 		<string>https://github.com/bira89/NanoChallenges.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>Jogo da Velha/Jogo da Velha.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>200DDBF1414C4C1AB8D97AA58178C22A93408E51</key>
+		<string>../../../..</string>
 		<key>F43D3E137651682FC0942D9E0252E6B4657E07D4</key>
 		<string>../../..</string>
 	</dict>
@@ -28,6 +32,14 @@
 	<string>F43D3E137651682FC0942D9E0252E6B4657E07D4</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>200DDBF1414C4C1AB8D97AA58178C22A93408E51</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
