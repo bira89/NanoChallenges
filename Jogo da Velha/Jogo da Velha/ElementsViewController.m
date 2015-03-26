@@ -14,13 +14,16 @@
 }
 
 @property (nonatomic) int currentPlayerIndex;
+@property (nonatomic) int pontuacao1;
+@property (nonatomic) int pontuacao2;
 
 @property (nonatomic, copy) NSArray *player;
 @property (nonatomic, copy) NSArray *imageButtons;
 @property (nonatomic, copy) NSArray *linhas;
 @property (weak, nonatomic) IBOutlet UILabel *vencedor;
 @property (weak, nonatomic) IBOutlet UIImageView *traco;
-
+@property (weak, nonatomic) IBOutlet UILabel *pontos1;
+@property (weak, nonatomic) IBOutlet UILabel *pontos2;
 
 @property (weak, nonatomic) IBOutlet UIImageView *playerX;
 @property (weak, nonatomic) IBOutlet UIImageView *playerO;
@@ -83,6 +86,9 @@
             matriz[i][j] = 0;
     
     _currentPlayerIndex = 1;
+    _pontuacao1 = 0;
+    _pontuacao2 = 0;
+    
     
     return self;
 }
@@ -313,7 +319,32 @@
     return jogadorAtual;
 }
 
+-(void) atualizaPontos
+{
+    UIColor *colorGanhador =[UIColor redColor];
+    UIColor *colorEmpate =[UIColor blackColor];
 
+    if(self.currentPlayerIndex==1){
+        self.pontuacao1 += 1;
+        NSString *pont1 = [NSString stringWithFormat:@"%d", self.pontuacao1];
+        [self.pontos1 setText: pont1];
+    }else{
+        self.pontuacao2 += 1;
+        NSString *pont2 = [NSString stringWithFormat:@"%d", self.pontuacao2];
+        [self.pontos2 setText: pont2];
+    }
+    if(self.pontuacao1==self.pontuacao2){
+        [self.pontos1 setTextColor: colorEmpate];
+        [self.pontos2 setTextColor: colorEmpate];
+    }
+    else if(self.pontuacao1 > self.pontuacao2){
+        [self.pontos1 setTextColor:colorGanhador];
+        [self.pontos2 setTextColor:colorEmpate];
+    }else {
+        [self.pontos1 setTextColor:colorEmpate];
+        [self.pontos2 setTextColor:colorGanhador];
+    }
+}
 
 - (void) condicaoVitoria
 {
@@ -328,6 +359,7 @@
             self.traco.hidden = false;
             [self.traco setImage:self.linhas[i+3]];
             [self.vencedor setText:[NSString stringWithFormat:@"Jogador %d ganhou!", _currentPlayerIndex ]];
+            [self atualizaPontos];
             return;
         }
         
@@ -338,6 +370,8 @@
             [self.vencedor setText:[NSString stringWithFormat:@"Jogador %d ganhou!", _currentPlayerIndex ]];
             self.traco.hidden = false;
             [self.traco setImage:self.linhas[i]];
+            [self atualizaPontos];
+            
             return;
         }
         
@@ -349,6 +383,7 @@
         [self.vencedor setText:[NSString stringWithFormat:@"Jogador %d ganhou!", _currentPlayerIndex ]];
         self.traco.hidden = false;
         [self.traco setImage:self.linhas[7]];
+        [self atualizaPontos];
         return;
     }
     
@@ -358,6 +393,7 @@
         self.traco.hidden = false;
         [self.traco setImage:self.linhas[6]];
         [self.vencedor setText:[NSString stringWithFormat:@"Jogador %d ganhou!", _currentPlayerIndex ]];
+        [self atualizaPontos];
         return;
     }
     
@@ -371,14 +407,12 @@
     if (velha)
         [self.vencedor setText:[NSString stringWithFormat:@"Deu velha!"]];
     
-    
+}
     
     
     
 //            [NSString stringWithFormat:@"<%@: %d unassigned>", self.label, self.resaleValue];
     
 
-
-}
 
 @end

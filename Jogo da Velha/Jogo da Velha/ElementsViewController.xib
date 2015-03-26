@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -18,6 +18,8 @@
                 <outlet property="area8" destination="O1u-N2-fQu" id="bRH-TJ-Svv"/>
                 <outlet property="playerO" destination="U2O-BG-q6I" id="N9n-rR-2rs"/>
                 <outlet property="playerX" destination="D5Z-9h-ruC" id="d6U-50-oI5"/>
+                <outlet property="pontos1" destination="A7u-wm-6J5" id="hiZ-0Z-Dks"/>
+                <outlet property="pontos2" destination="5X7-6p-BDu" id="mqf-9A-vYb"/>
                 <outlet property="traco" destination="9dU-hc-nrc" id="Lay-Fi-9qx"/>
                 <outlet property="vencedor" destination="Diu-Dz-6g0" id="xFP-xe-Igg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -29,7 +31,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="caderno2.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Lh-F9-Q8a">
-                    <rect key="frame" x="-6" y="0.0" width="390" height="677"/>
+                    <rect key="frame" x="-5" y="0.0" width="390" height="677"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D5Z-9h-ruC" userLabel="JogadorX">
                     <rect key="frame" x="22" y="86" width="45" height="45"/>
@@ -38,7 +40,7 @@
                     </userDefinedRuntimeAttributes>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hashtag2.png" translatesAutoresizingMaskIntoConstraints="NO" id="XRw-8a-GFz">
-                    <rect key="frame" x="22" y="174" width="330" height="471"/>
+                    <rect key="frame" x="22" y="174" width="330" height="335"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jogo da Velha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6x-v1-0Oz">
                     <rect key="frame" x="105" y="32" width="187" height="21"/>
@@ -50,7 +52,7 @@
                     <rect key="frame" x="308" y="86" width="45" height="45"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VbV-0D-kMu" userLabel="Area0">
-                    <rect key="frame" x="35" y="195" width="82" height="101"/>
+                    <rect key="frame" x="41" y="195" width="70" height="60"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                     </accessibility>
@@ -65,7 +67,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgZ-af-dHb" userLabel="Area1">
-                    <rect key="frame" x="150" y="195" width="82" height="101"/>
+                    <rect key="frame" x="152" y="195" width="70" height="60"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -74,7 +76,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WO4-ZP-6Bc" userLabel="Area2">
-                    <rect key="frame" x="257" y="195" width="82" height="101"/>
+                    <rect key="frame" x="263" y="195" width="70" height="60"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -83,7 +85,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9D5-Fk-kkY" userLabel="Area3">
-                    <rect key="frame" x="35" y="359" width="82" height="101"/>
+                    <rect key="frame" x="35" y="309" width="70" height="60"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -92,7 +94,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cts-jW-lft" userLabel="Area4">
-                    <rect key="frame" x="150" y="359" width="82" height="101"/>
+                    <rect key="frame" x="152" y="309" width="70" height="60"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -101,7 +103,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8C-p1-nEO" userLabel="Area5">
-                    <rect key="frame" x="257" y="359" width="82" height="101"/>
+                    <rect key="frame" x="263" y="309" width="70" height="60"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -110,7 +112,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCa-i6-kB4" userLabel="Area6">
-                    <rect key="frame" x="35" y="512" width="82" height="101"/>
+                    <rect key="frame" x="35" y="432" width="70" height="60"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -119,7 +121,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQL-mH-Vme" userLabel="Area7">
-                    <rect key="frame" x="150" y="512" width="82" height="101"/>
+                    <rect key="frame" x="152" y="432" width="70" height="60"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -128,7 +130,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1u-N2-fQu" userLabel="Area8">
-                    <rect key="frame" x="257" y="512" width="82" height="101"/>
+                    <rect key="frame" x="263" y="432" width="70" height="60"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -136,15 +138,12 @@
                         <action selector="area8:" destination="-1" eventType="touchUpInside" id="GML-T5-fBw"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Diu-Dz-6g0">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Diu-Dz-6g0" userLabel="Status jogo">
                     <rect key="frame" x="80" y="91" width="220" height="45"/>
                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="23"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="traco1.png" translatesAutoresizingMaskIntoConstraints="NO" id="9dU-hc-nrc" userLabel="Traco">
-                    <rect key="frame" x="21" y="174" width="331" height="471"/>
-                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7Og-zo-rFg">
                     <rect key="frame" x="21" y="9" width="75" height="80"/>
                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="12"/>
@@ -153,6 +152,39 @@
                         <action selector="resetGame:" destination="-1" eventType="touchUpInside" id="u9T-3d-Y7Y"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jogador 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwi-VO-dLa">
+                    <rect key="frame" x="29" y="547" width="120" height="53"/>
+                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="23"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jogador 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bf-Lb-Tec" userLabel="Jogador 2">
+                    <rect key="frame" x="222" y="547" width="120" height="53"/>
+                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="23"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7u-wm-6J5" userLabel="Jogador1Pontos">
+                    <rect key="frame" x="54" y="593" width="57" height="40"/>
+                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="40"/>
+                    <color key="textColor" red="0.21248635756528333" green="0.69371501827412174" blue="0.76671006944444442" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5X7-6p-BDu" userLabel="Jogador2Pontos">
+                    <rect key="frame" x="254" y="593" width="57" height="40"/>
+                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="40"/>
+                    <color key="textColor" red="0.21248635760000001" green="0.69371501830000004" blue="0.76671006939999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ea-O8-aLo">
+                    <rect key="frame" x="152" y="601" width="52" height="32"/>
+                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="50"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="traco1.png" translatesAutoresizingMaskIntoConstraints="NO" id="9dU-hc-nrc" userLabel="Traco">
+                    <rect key="frame" x="22" y="174" width="331" height="347"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
