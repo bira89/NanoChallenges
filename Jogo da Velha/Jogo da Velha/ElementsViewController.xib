@@ -28,6 +28,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="caderno.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Lh-F9-Q8a">
+                    <rect key="frame" x="-6" y="0.0" width="390" height="677"/>
+                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D5Z-9h-ruC" userLabel="JogadorX">
                     <rect key="frame" x="22" y="86" width="45" height="45"/>
                     <userDefinedRuntimeAttributes>
@@ -160,6 +163,7 @@
     <resources>
         <image name="662B5D2A-00E1-499D-8EFD-E4BDBD8B6930" width="48" height="48"/>
         <image name="6A82C110-9349-4F61-B6EE-53F8EF050933" width="48" height="48"/>
+        <image name="caderno.png" width="568" height="788"/>
         <image name="hashtag2.png" width="360" height="406"/>
         <image name="traco1.png" width="331" height="471"/>
     </resources>

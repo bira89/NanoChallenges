@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093865351AC48C87009BB71B /* tictactoeSplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 093865341AC48C87009BB71B /* tictactoeSplash.jpg */; };
+		093865391AC4928C009BB71B /* hashtag2.png in Resources */ = {isa = PBXBuildFile; fileRef = 093865381AC4928C009BB71B /* hashtag2.png */; };
+		0938653B1AC492F3009BB71B /* caderno.png in Resources */ = {isa = PBXBuildFile; fileRef = 0938653A1AC492F3009BB71B /* caderno.png */; };
 		09EB66F61AC47CC80027EF6C /* traco8.png in Resources */ = {isa = PBXBuildFile; fileRef = 09EB66F51AC47CC80027EF6C /* traco8.png */; };
 		09EB66FE1AC47DEB0027EF6C /* traco1.png in Resources */ = {isa = PBXBuildFile; fileRef = 09EB66F71AC47DEB0027EF6C /* traco1.png */; };
 		09EB66FF1AC47DEB0027EF6C /* traco2.png in Resources */ = {isa = PBXBuildFile; fileRef = 09EB66F81AC47DEB0027EF6C /* traco2.png */; };
@@ -24,7 +27,6 @@
 		44D0C7961AC469A60024B2D8 /* ElementsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D0C78D1AC469A60024B2D8 /* ElementsViewController.xib */; };
 		44D0C7971AC469A60024B2D8 /* empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D0C78E1AC469A60024B2D8 /* empty.png */; };
 		44D0C7981AC469A60024B2D8 /* hashtag.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D0C78F1AC469A60024B2D8 /* hashtag.png */; };
-		44D0C7991AC469A60024B2D8 /* hashtag2.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D0C7901AC469A60024B2D8 /* hashtag2.png */; };
 		44D0C79A1AC469A60024B2D8 /* imageO.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D0C7911AC469A60024B2D8 /* imageO.png */; };
 		44D0C79B1AC469A60024B2D8 /* imageO2.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D0C7921AC469A60024B2D8 /* imageO2.png */; };
 		44D0C79C1AC469A60024B2D8 /* imageX.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D0C7931AC469A60024B2D8 /* imageX.png */; };
@@ -43,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		093865341AC48C87009BB71B /* tictactoeSplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tictactoeSplash.jpg; sourceTree = "<group>"; };
+		093865381AC4928C009BB71B /* hashtag2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hashtag2.png; sourceTree = "<group>"; };
+		0938653A1AC492F3009BB71B /* caderno.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caderno.png; sourceTree = "<group>"; };
 		09EB66F51AC47CC80027EF6C /* traco8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = traco8.png; path = ../traco8.png; sourceTree = "<group>"; };
 		09EB66F71AC47DEB0027EF6C /* traco1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = traco1.png; sourceTree = "<group>"; };
 		09EB66F81AC47DEB0027EF6C /* traco2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = traco2.png; sourceTree = "<group>"; };
@@ -66,7 +71,6 @@
 		44D0C78D1AC469A60024B2D8 /* ElementsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ElementsViewController.xib; sourceTree = "<group>"; };
 		44D0C78E1AC469A60024B2D8 /* empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empty.png; sourceTree = "<group>"; };
 		44D0C78F1AC469A60024B2D8 /* hashtag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hashtag.png; sourceTree = "<group>"; };
-		44D0C7901AC469A60024B2D8 /* hashtag2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hashtag2.png; sourceTree = "<group>"; };
 		44D0C7911AC469A60024B2D8 /* imageO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageO.png; sourceTree = "<group>"; };
 		44D0C7921AC469A60024B2D8 /* imageO2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageO2.png; sourceTree = "<group>"; };
 		44D0C7931AC469A60024B2D8 /* imageX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageX.png; sourceTree = "<group>"; };
@@ -121,8 +125,8 @@
 				44D0C78D1AC469A60024B2D8 /* ElementsViewController.xib */,
 				44D0C78E1AC469A60024B2D8 /* empty.png */,
 				44D0C78F1AC469A60024B2D8 /* hashtag.png */,
-				44D0C7901AC469A60024B2D8 /* hashtag2.png */,
 				44D0C7911AC469A60024B2D8 /* imageO.png */,
+				093865381AC4928C009BB71B /* hashtag2.png */,
 				44D0C7921AC469A60024B2D8 /* imageO2.png */,
 				44D0C7931AC469A60024B2D8 /* imageX.png */,
 				44D0C7941AC469A60024B2D8 /* imageX2.png */,
@@ -133,6 +137,8 @@
 				09EB66FB1AC47DEB0027EF6C /* traco5.png */,
 				09EB66FC1AC47DEB0027EF6C /* traco6.png */,
 				09EB66FD1AC47DEB0027EF6C /* traco7.png */,
+				0938653A1AC492F3009BB71B /* caderno.png */,
+				093865341AC48C87009BB71B /* tictactoeSplash.jpg */,
 				09EB66F51AC47CC80027EF6C /* traco8.png */,
 				443A5EB91AC456240057623F /* AppDelegate.h */,
 				443A5EBA1AC456240057623F /* AppDelegate.m */,
@@ -259,14 +265,16 @@
 				44D0C79B1AC469A60024B2D8 /* imageO2.png in Resources */,
 				44D0C7981AC469A60024B2D8 /* hashtag.png in Resources */,
 				09EB67041AC47DEB0027EF6C /* traco7.png in Resources */,
+				0938653B1AC492F3009BB71B /* caderno.png in Resources */,
 				443A5EBD1AC456240057623F /* Images.xcassets in Resources */,
 				09EB66F61AC47CC80027EF6C /* traco8.png in Resources */,
 				09EB66FF1AC47DEB0027EF6C /* traco2.png in Resources */,
 				09EB67021AC47DEB0027EF6C /* traco5.png in Resources */,
+				093865351AC48C87009BB71B /* tictactoeSplash.jpg in Resources */,
+				093865391AC4928C009BB71B /* hashtag2.png in Resources */,
 				44D0C7971AC469A60024B2D8 /* empty.png in Resources */,
 				09EB67011AC47DEB0027EF6C /* traco4.png in Resources */,
 				44D0C79A1AC469A60024B2D8 /* imageO.png in Resources */,
-				44D0C7991AC469A60024B2D8 /* hashtag2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
