@@ -27,6 +27,6 @@
         </view>
     </objects>
     <resources>
-        <image name="caderno.png" width="568" height="880"/>
+        <image name="caderno.png" width="568" height="788"/>
     </resources>
 </document>

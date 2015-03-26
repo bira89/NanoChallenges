@@ -10,6 +10,7 @@
 		093865351AC48C87009BB71B /* tictactoeSplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 093865341AC48C87009BB71B /* tictactoeSplash.jpg */; };
 		093865391AC4928C009BB71B /* hashtag2.png in Resources */ = {isa = PBXBuildFile; fileRef = 093865381AC4928C009BB71B /* hashtag2.png */; };
 		0938653B1AC492F3009BB71B /* caderno.png in Resources */ = {isa = PBXBuildFile; fileRef = 0938653A1AC492F3009BB71B /* caderno.png */; };
+		0938653D1AC4A68E009BB71B /* caderno2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0938653C1AC4A68E009BB71B /* caderno2.png */; };
 		09EB66F61AC47CC80027EF6C /* traco8.png in Resources */ = {isa = PBXBuildFile; fileRef = 09EB66F51AC47CC80027EF6C /* traco8.png */; };
 		09EB66FE1AC47DEB0027EF6C /* traco1.png in Resources */ = {isa = PBXBuildFile; fileRef = 09EB66F71AC47DEB0027EF6C /* traco1.png */; };
 		09EB66FF1AC47DEB0027EF6C /* traco2.png in Resources */ = {isa = PBXBuildFile; fileRef = 09EB66F81AC47DEB0027EF6C /* traco2.png */; };
@@ -48,6 +49,7 @@
 		093865341AC48C87009BB71B /* tictactoeSplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tictactoeSplash.jpg; sourceTree = "<group>"; };
 		093865381AC4928C009BB71B /* hashtag2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hashtag2.png; sourceTree = "<group>"; };
 		0938653A1AC492F3009BB71B /* caderno.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caderno.png; sourceTree = "<group>"; };
+		0938653C1AC4A68E009BB71B /* caderno2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caderno2.png; sourceTree = "<group>"; };
 		09EB66F51AC47CC80027EF6C /* traco8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = traco8.png; path = ../traco8.png; sourceTree = "<group>"; };
 		09EB66F71AC47DEB0027EF6C /* traco1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = traco1.png; sourceTree = "<group>"; };
 		09EB66F81AC47DEB0027EF6C /* traco2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = traco2.png; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				09EB66FC1AC47DEB0027EF6C /* traco6.png */,
 				09EB66FD1AC47DEB0027EF6C /* traco7.png */,
 				0938653A1AC492F3009BB71B /* caderno.png */,
+				0938653C1AC4A68E009BB71B /* caderno2.png */,
 				093865341AC48C87009BB71B /* tictactoeSplash.jpg */,
 				09EB66F51AC47CC80027EF6C /* traco8.png */,
 				443A5EB91AC456240057623F /* AppDelegate.h */,
@@ -266,6 +269,7 @@
 				44D0C7981AC469A60024B2D8 /* hashtag.png in Resources */,
 				09EB67041AC47DEB0027EF6C /* traco7.png in Resources */,
 				0938653B1AC492F3009BB71B /* caderno.png in Resources */,
+				0938653D1AC4A68E009BB71B /* caderno2.png in Resources */,
 				443A5EBD1AC456240057623F /* Images.xcassets in Resources */,
 				09EB66F61AC47CC80027EF6C /* traco8.png in Resources */,
 				09EB66FF1AC47DEB0027EF6C /* traco2.png in Resources */,

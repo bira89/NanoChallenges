@@ -361,6 +361,18 @@
         return;
     }
     
+    bool velha = true;
+    for (int i = 0; i < 3; i++)
+        for(int j = 0; j < 3; j++)
+            if (matriz[i][j] == 0)
+                velha = false;
+            
+        
+    if (velha)
+        [self.vencedor setText:[NSString stringWithFormat:@"Deu velha!"]];
+    
+    
+    
     
     
 //            [NSString stringWithFormat:@"<%@: %d unassigned>", self.label, self.resaleValue];

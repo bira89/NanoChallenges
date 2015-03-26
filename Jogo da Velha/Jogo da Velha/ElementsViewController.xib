@@ -28,7 +28,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="caderno.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Lh-F9-Q8a">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="caderno2.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Lh-F9-Q8a">
                     <rect key="frame" x="-6" y="0.0" width="390" height="677"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D5Z-9h-ruC" userLabel="JogadorX">
@@ -40,10 +40,10 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hashtag2.png" translatesAutoresizingMaskIntoConstraints="NO" id="XRw-8a-GFz">
                     <rect key="frame" x="22" y="174" width="330" height="471"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jogo da Velha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6x-v1-0Oz">
-                    <rect key="frame" x="133" y="32" width="109" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jogo da Velha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6x-v1-0Oz">
+                    <rect key="frame" x="105" y="32" width="187" height="21"/>
+                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                    <color key="textColor" red="1" green="0.024299509602128455" blue="0.060629024287243372" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U2O-BG-q6I" userLabel="JogadorO">
@@ -136,23 +136,23 @@
                         <action selector="area8:" destination="-1" eventType="touchUpInside" id="GML-T5-fBw"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Diu-Dz-6g0">
-                    <rect key="frame" x="104" y="86" width="187" height="45"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Diu-Dz-6g0">
+                    <rect key="frame" x="80" y="91" width="220" height="45"/>
+                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="23"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Og-zo-rFg">
-                    <rect key="frame" x="21" y="23" width="63" height="30"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                    <state key="normal" title="Again"/>
+                <imageView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="traco1.png" translatesAutoresizingMaskIntoConstraints="NO" id="9dU-hc-nrc" userLabel="Traco">
+                    <rect key="frame" x="21" y="174" width="331" height="471"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7Og-zo-rFg">
+                    <rect key="frame" x="21" y="9" width="75" height="80"/>
+                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="12"/>
+                    <state key="normal" title="   Jogar novamente"/>
                     <connections>
                         <action selector="resetGame:" destination="-1" eventType="touchUpInside" id="u9T-3d-Y7Y"/>
                     </connections>
                 </button>
-                <imageView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="traco1.png" translatesAutoresizingMaskIntoConstraints="NO" id="9dU-hc-nrc" userLabel="Traco">
-                    <rect key="frame" x="21" y="174" width="331" height="471"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -163,7 +163,7 @@
     <resources>
         <image name="662B5D2A-00E1-499D-8EFD-E4BDBD8B6930" width="48" height="48"/>
         <image name="6A82C110-9349-4F61-B6EE-53F8EF050933" width="48" height="48"/>
-        <image name="caderno.png" width="568" height="788"/>
+        <image name="caderno2.png" width="568" height="788"/>
         <image name="hashtag2.png" width="360" height="406"/>
         <image name="traco1.png" width="331" height="471"/>
     </resources>
