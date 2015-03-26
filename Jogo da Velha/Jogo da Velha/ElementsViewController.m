@@ -106,6 +106,11 @@
         }
     }
     
+    self.traco.hidden = true;
+
+    [self.vencedor setText:[NSString stringWithFormat:@""]];
+    
+    
 }
 
 - (IBAction)area0:(id)sender
