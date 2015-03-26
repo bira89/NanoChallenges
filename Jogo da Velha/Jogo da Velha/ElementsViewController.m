@@ -96,16 +96,16 @@
 {
     if (matriz[0][0] == 0){
         matriz[0][0] = _currentPlayerIndex == 1 ? 1 : 2;
+        [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area0 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex]forState:UIControlStateNormal];
     }
  
-    [self verMatriz];
+
     
-//        [self condicaoVitoria];
+    [self verMatriz];
     
 
-    [self verMatriz];
 
 }
 
@@ -114,12 +114,12 @@
 {
     if (matriz[0][1] == 0){
         matriz[0][1] = _currentPlayerIndex == 1 ? 1 : 2;
+        [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area1 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex] forState:UIControlStateNormal];
     }
 
     
-//    [self condicaoVitoria];
     
     
     
@@ -132,12 +132,12 @@
 {
     if (matriz[0][2] == 0){
         matriz[0][2] = _currentPlayerIndex == 1 ? 1 : 2;
+        [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area2 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex] forState:UIControlStateNormal];
     }
 
     
-//        [self condicaoVitoria];
     
 }
 
@@ -145,12 +145,12 @@
 {
     if (matriz[1][0] == 0){
         matriz[1][0] = _currentPlayerIndex == 1 ? 1 : 2;
+        [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area3 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex] forState:UIControlStateNormal];
     }
 
     
-//        [self condicaoVitoria];
     
 
 
@@ -160,12 +160,12 @@
 {
     if (matriz[1][1] == 0){
         matriz[1][1] = _currentPlayerIndex == 1 ? 1 : 2;
+        [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area4 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex] forState:UIControlStateNormal];
     }
 
     
-//        [self condicaoVitoria];
     
 
 
@@ -175,11 +175,11 @@
 {
     if (matriz[1][2] == 0){
         matriz[1][2] = _currentPlayerIndex == 1 ? 1 : 2;
+        [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area5 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex] forState:UIControlStateNormal];
     }
     
-//        [self condicaoVitoria];
     
 }
 
@@ -187,6 +187,7 @@
 {
     if (matriz[2][0] == 0){
         matriz[2][0] = _currentPlayerIndex == 1 ? 1 : 2;
+        [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area6 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex] forState:UIControlStateNormal];
     }
@@ -199,7 +200,6 @@
     }
      */
     
-//        [self condicaoVitoria];
 
 }
 
@@ -207,6 +207,7 @@
 {
     if (matriz[2][1] == 0){
         matriz[2][1] = _currentPlayerIndex == 1 ? 1 : 2;
+        [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area7 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex] forState:UIControlStateNormal];
     }
@@ -220,7 +221,6 @@
     }
      */
     
-//        [self condicaoVitoria];
     
     
 
@@ -231,12 +231,12 @@
 {
     if (matriz[2][2] == 0){
         matriz[2][2] = _currentPlayerIndex == 1 ? 1 : 2;
+        [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area8 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex] forState:UIControlStateNormal];
     }
 
     
-//        [self condicaoVitoria];
     
 
 
@@ -292,14 +292,40 @@
     
     NSLog(@"%d", _currentPlayerIndex);
     
-    // Verificacao Linhas
     for( int i = 0; i < 3; i++){
+        // Verificacao Linhas
         if ((matriz[i][0] == _currentPlayerIndex) && (matriz[i][1] == _currentPlayerIndex) && (matriz[i][2] == _currentPlayerIndex)){
             ganhou = true;
             [self.vencedor setText:[NSString stringWithFormat:@"Jogador %d ganhou!", _currentPlayerIndex ]];
             return;
         }
+        
+        
+        // Coluna
+        if ((matriz[0][i] == _currentPlayerIndex) && (matriz[1][i] == _currentPlayerIndex) && (matriz[2][i] == _currentPlayerIndex)){
+            ganhou = true;
+            [self.vencedor setText:[NSString stringWithFormat:@"Jogador %d ganhou!", _currentPlayerIndex ]];
+            return;
+        }
+        
     }
+    
+    // Diagonal Primaria
+    if ((matriz[0][0] == _currentPlayerIndex) && (matriz[1][1] == _currentPlayerIndex) && (matriz[2][2] == _currentPlayerIndex)){
+        ganhou = true;
+        [self.vencedor setText:[NSString stringWithFormat:@"Jogador %d ganhou!", _currentPlayerIndex ]];
+        return;
+    }
+    
+    // Diagonal Secundaria
+    if ((matriz[0][2] == _currentPlayerIndex) && (matriz[1][1] == _currentPlayerIndex) && (matriz[2][0] == _currentPlayerIndex)){
+        ganhou = true;
+        [self.vencedor setText:[NSString stringWithFormat:@"Jogador %d ganhou!", _currentPlayerIndex ]];
+        return;
+    }
+    
+    
+    
 //            [NSString stringWithFormat:@"<%@: %d unassigned>", self.label, self.resaleValue];
     
 
