@@ -17,10 +17,14 @@
 
 @property (nonatomic, copy) NSArray *player;
 @property (nonatomic, copy) NSArray *imageButtons;
+@property (nonatomic, copy) NSArray *linhas;
 @property (weak, nonatomic) IBOutlet UILabel *vencedor;
+@property (weak, nonatomic) IBOutlet UIImageView *traco;
+
 
 @property (weak, nonatomic) IBOutlet UIImageView *playerX;
 @property (weak, nonatomic) IBOutlet UIImageView *playerO;
+
 @property (weak, nonatomic) IBOutlet UIButton *again;
 @property (weak, nonatomic) IBOutlet UIButton *area0;
 @property (weak, nonatomic) IBOutlet UIButton *area1;
@@ -44,7 +48,15 @@
     UIImage *newX2 = [UIImage imageNamed:@"imageX2.png"];
     UIImage *newO = [UIImage imageNamed:@"imageO.png"];
     UIImage *newO2 = [UIImage imageNamed:@"imageO2.png"];
-    
+    UIImage *traco1 = [UIImage imageNamed:@"traco1.png"];
+    UIImage *traco2 = [UIImage imageNamed:@"traco2.png"];
+    UIImage *traco3 = [UIImage imageNamed:@"traco3.png"];
+    UIImage *traco4 = [UIImage imageNamed:@"traco4.png"];
+    UIImage *traco5 = [UIImage imageNamed:@"traco5.png"];
+    UIImage *traco6 = [UIImage imageNamed:@"traco6.png"];
+    UIImage *traco7 = [UIImage imageNamed:@"traco7.png"];
+    UIImage *traco8 = [UIImage imageNamed:@"traco8.png"];
+    self.linhas = @[traco1, traco2, traco3, traco4, traco5, traco6, traco7, traco8];
     self.imageButtons = @[new, newO, newX];
     self.player = @[newX, newX2, newO, newO2];
     [self.playerX setImage:newX2];
@@ -308,6 +320,8 @@
         // Verificacao Linhas
         if ((matriz[i][0] == _currentPlayerIndex) && (matriz[i][1] == _currentPlayerIndex) && (matriz[i][2] == _currentPlayerIndex)){
             ganhou = true;
+            self.traco.hidden = false;
+            [self.traco setImage:self.linhas[i+3]];
             [self.vencedor setText:[NSString stringWithFormat:@"Jogador %d ganhou!", _currentPlayerIndex ]];
             return;
         }
@@ -317,6 +331,8 @@
         if ((matriz[0][i] == _currentPlayerIndex) && (matriz[1][i] == _currentPlayerIndex) && (matriz[2][i] == _currentPlayerIndex)){
             ganhou = true;
             [self.vencedor setText:[NSString stringWithFormat:@"Jogador %d ganhou!", _currentPlayerIndex ]];
+            self.traco.hidden = false;
+            [self.traco setImage:self.linhas[i]];
             return;
         }
         
@@ -326,12 +342,16 @@
     if ((matriz[0][0] == _currentPlayerIndex) && (matriz[1][1] == _currentPlayerIndex) && (matriz[2][2] == _currentPlayerIndex)){
         ganhou = true;
         [self.vencedor setText:[NSString stringWithFormat:@"Jogador %d ganhou!", _currentPlayerIndex ]];
+        self.traco.hidden = false;
+        [self.traco setImage:self.linhas[7]];
         return;
     }
     
     // Diagonal Secundaria
     if ((matriz[0][2] == _currentPlayerIndex) && (matriz[1][1] == _currentPlayerIndex) && (matriz[2][0] == _currentPlayerIndex)){
         ganhou = true;
+        self.traco.hidden = false;
+        [self.traco setImage:self.linhas[6]];
         [self.vencedor setText:[NSString stringWithFormat:@"Jogador %d ganhou!", _currentPlayerIndex ]];
         return;
     }

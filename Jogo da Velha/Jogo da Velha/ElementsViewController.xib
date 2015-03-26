@@ -18,6 +18,7 @@
                 <outlet property="area8" destination="O1u-N2-fQu" id="bRH-TJ-Svv"/>
                 <outlet property="playerO" destination="U2O-BG-q6I" id="N9n-rR-2rs"/>
                 <outlet property="playerX" destination="D5Z-9h-ruC" id="d6U-50-oI5"/>
+                <outlet property="traco" destination="9dU-hc-nrc" id="Lay-Fi-9qx"/>
                 <outlet property="vencedor" destination="Diu-Dz-6g0" id="xFP-xe-Igg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -132,14 +133,12 @@
                         <action selector="area8:" destination="-1" eventType="touchUpInside" id="GML-T5-fBw"/>
                     </connections>
                 </button>
-
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Diu-Dz-6g0">
                     <rect key="frame" x="91" y="86" width="187" height="45"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Og-zo-rFg">
                     <rect key="frame" x="21" y="23" width="63" height="30"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -148,7 +147,9 @@
                         <action selector="resetGame:" destination="-1" eventType="touchUpInside" id="u9T-3d-Y7Y"/>
                     </connections>
                 </button>
-
+                <imageView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="traco1.png" translatesAutoresizingMaskIntoConstraints="NO" id="9dU-hc-nrc" userLabel="Traco">
+                    <rect key="frame" x="21" y="174" width="331" height="471"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -160,6 +161,7 @@
         <image name="662B5D2A-00E1-499D-8EFD-E4BDBD8B6930" width="48" height="48"/>
         <image name="6A82C110-9349-4F61-B6EE-53F8EF050933" width="48" height="48"/>
         <image name="hashtag2.png" width="360" height="406"/>
+        <image name="traco1.png" width="331" height="471"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
