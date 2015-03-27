@@ -8,11 +8,13 @@
 
 #import "ElementsViewController.h"
 #import "SoundManager.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ElementsViewController ()
 {
     int matriz[3][3];
 }
+@property (strong, nonatomic) IBOutlet UIView *view;
 
 @property (nonatomic) int currentPlayerIndex;
 @property (nonatomic) int pontuacao1;
@@ -39,6 +41,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *area6;
 @property (weak, nonatomic) IBOutlet UIButton *area7;
 @property (weak, nonatomic) IBOutlet UIButton *area8;
+
 
 
 @end
@@ -69,6 +72,8 @@
     
     [SoundManager sharedManager].allowsBackgroundMusic = YES;
     [[SoundManager sharedManager] prepareToPlay];
+    
+    [[SoundManager sharedManager] playMusic:@"background.wav" looping:YES];
     
 }
 
@@ -101,6 +106,10 @@
 
 - (IBAction)resetGame:(id)sender {
     
+    
+    //[_view.layer removeAllAnimations];
+    
+    
     [self.area0 setImage:[self.imageButtons objectAtIndex:0] forState:UIControlStateNormal];
     [self.area1 setImage:[self.imageButtons objectAtIndex:0] forState:UIControlStateNormal];
     [self.area2 setImage:[self.imageButtons objectAtIndex:0] forState:UIControlStateNormal];
@@ -123,6 +132,9 @@
     [self.vencedor setText:[NSString stringWithFormat:@""]];
     
     
+    
+    
+    
 }
 
 - (IBAction)area0:(id)sender
@@ -130,7 +142,8 @@
     
    
     if (matriz[0][0] == 0){
-        [[SoundManager sharedManager] playMusic:@"jogada.wav" looping:NO];
+        [[SoundManager sharedManager] playSound:@"jogada.wav" looping:NO];
+
         
         matriz[0][0] = _currentPlayerIndex == 1 ? 1 : 2;
         [self condicaoVitoria];
@@ -150,7 +163,7 @@
 - (IBAction)area1:(id)sender
 {
     if (matriz[0][1] == 0){
-        [[SoundManager sharedManager] playMusic:@"jogada.wav" looping:NO];
+        [[SoundManager sharedManager] playSound:@"jogada.wav" looping:NO];
         matriz[0][1] = _currentPlayerIndex == 1 ? 1 : 2;
         [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
@@ -169,7 +182,7 @@
 - (IBAction)area2:(id)sender
 {
     if (matriz[0][2] == 0){
-        [[SoundManager sharedManager] playMusic:@"jogada.wav" looping:NO];
+        [[SoundManager sharedManager] playSound:@"jogada.wav" looping:NO];
         matriz[0][2] = _currentPlayerIndex == 1 ? 1 : 2;
         [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
@@ -183,7 +196,7 @@
 - (IBAction)area3:(id)sender
 {
     if (matriz[1][0] == 0){
-        [[SoundManager sharedManager] playMusic:@"jogada.wav" looping:NO];
+        [[SoundManager sharedManager] playSound:@"jogada.wav" looping:NO];
         matriz[1][0] = _currentPlayerIndex == 1 ? 1 : 2;
         [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
@@ -199,7 +212,7 @@
 - (IBAction)area4:(id)sender
 {
     if (matriz[1][1] == 0){
-        [[SoundManager sharedManager] playMusic:@"jogada.wav" looping:NO];
+        [[SoundManager sharedManager] playSound:@"jogada.wav" looping:NO];
         matriz[1][1] = _currentPlayerIndex == 1 ? 1 : 2;
         [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
@@ -215,7 +228,7 @@
 - (IBAction)area5:(id)sender
 {
     if (matriz[1][2] == 0){
-        [[SoundManager sharedManager] playMusic:@"jogada.wav" looping:NO];
+        [[SoundManager sharedManager] playSound:@"jogada.wav" looping:NO];
         matriz[1][2] = _currentPlayerIndex == 1 ? 1 : 2;
         [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
@@ -228,7 +241,7 @@
 - (IBAction)area6:(id)sender
 {
     if (matriz[2][0] == 0){
-        [[SoundManager sharedManager] playMusic:@"jogada.wav" looping:NO];
+        [[SoundManager sharedManager] playSound:@"jogada.wav" looping:NO];
         matriz[2][0] = _currentPlayerIndex == 1 ? 1 : 2;
         [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
@@ -249,32 +262,19 @@
 - (IBAction)area7:(id)sender
 {
     if (matriz[2][1] == 0){
-        [[SoundManager sharedManager] playMusic:@"jogada.wav" looping:NO];
+        [[SoundManager sharedManager] playSound:@"jogada.wav" looping:NO];
         matriz[2][1] = _currentPlayerIndex == 1 ? 1 : 2;
         [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area7 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex] forState:UIControlStateNormal];
     }
 
-    
-    /*
-    if (_currentPlayerIndex == 1){
-        matriz[2][1] = 1;
-    } else {
-        matriz[2][1] = 2;
-    }
-     */
-    
-    
-    
-
-
 }
 
 - (IBAction)area8:(id)sender
 {
     if (matriz[2][2] == 0){
-        [[SoundManager sharedManager] playMusic:@"jogada.wav" looping:NO];
+        [[SoundManager sharedManager] playSound:@"jogada.wav" looping:NO];
         matriz[2][2] = _currentPlayerIndex == 1 ? 1 : 2;
         [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
@@ -378,6 +378,18 @@
             [self.traco setImage:self.linhas[i+3]];
             [self.vencedor setText:[NSString stringWithFormat:@"Jogador %d ganhou!", _currentPlayerIndex ]];
             [self atualizaPontos];
+            
+            [UIView animateWithDuration:1.0
+                                  delay:0
+                                options:(UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionAllowUserInteraction)
+                             animations:^{
+                                 
+                                 _again.alpha = 0.05;
+                             }
+                             completion:^(BOOL completed) {}];
+
+            
+
             return;
         }
         
@@ -389,6 +401,14 @@
             self.traco.hidden = false;
             [self.traco setImage:self.linhas[i]];
             [self atualizaPontos];
+            [UIView animateWithDuration:1.0
+                                  delay:0
+                                options:(UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionAllowUserInteraction)
+                             animations:^{
+                                 
+                                 _again.alpha = 0.05;
+                             }
+                             completion:^(BOOL completed) {}];
             
             return;
         }
@@ -402,6 +422,16 @@
         self.traco.hidden = false;
         [self.traco setImage:self.linhas[7]];
         [self atualizaPontos];
+        [UIView animateWithDuration:1.0
+                              delay:0
+                            options: UIViewAnimationOptionAllowUserInteraction   |
+                                    UIViewAnimationOptionRepeat |
+                                    UIViewAnimationOptionAutoreverse
+                         animations:^{
+                             
+                             _again.alpha = 0.08;
+                         }
+                         completion:^(BOOL completed) {}];
         return;
     }
     
@@ -412,6 +442,17 @@
         [self.traco setImage:self.linhas[6]];
         [self.vencedor setText:[NSString stringWithFormat:@"Jogador %d ganhou!", _currentPlayerIndex ]];
         [self atualizaPontos];
+        [UIView animateWithDuration:1.0
+                              delay:0
+                            options: UIViewAnimationOptionAllowUserInteraction   |
+         UIViewAnimationOptionRepeat |
+         
+         UIViewAnimationOptionAutoreverse
+                         animations:^{
+                             
+                             _again.alpha = 0.08;
+                         }
+                         completion:^(BOOL completed) {}];
         return;
     }
     
@@ -422,8 +463,24 @@
                 velha = false;
             
         
-    if (velha)
+    if (velha){
         [self.vencedor setText:[NSString stringWithFormat:@"Deu velha!"]];
+        [UIView animateWithDuration:1.0
+                              delay:0
+                            options: UIViewAnimationOptionAllowUserInteraction   |
+         UIViewAnimationOptionRepeat |
+         
+         UIViewAnimationOptionAutoreverse
+                         animations:^{
+                             
+                             _again.alpha = 0.08;
+                         }
+                         completion:^(BOOL completed) {}];
+        
+    }
+    
+    
+   
     
 }
     
