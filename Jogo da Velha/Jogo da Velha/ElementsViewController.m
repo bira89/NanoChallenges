@@ -85,13 +85,6 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil
                          bundle:(NSBundle *)nibBundleOrNil
 {
-//    UIImage *new = [UIImage imageNamed:@"nil.png"];
-//    UIImage *newX = [UIImage imageNamed:@"imageO.png"];
-//    UIImage *newO = [UIImage imageNamed:@"imageX.png"];
-//    self.imageButtons = @[new, newO, newX];
-//    [self.playerX setImage:newX];
-//    [self.playerO setImage:newO];
-    
     for (int i = 0; i < 3; i++)
         for ( int j = 0; j < 3; j++)
             matriz[i][j] = 0;
@@ -105,12 +98,7 @@
 }
 
 - (IBAction)resetGame:(id)sender {
-    
-    
-
-    
-    
-    
+  
     [self.area0 setImage:[self.imageButtons objectAtIndex:0] forState:UIControlStateNormal];
     [self.area1 setImage:[self.imageButtons objectAtIndex:0] forState:UIControlStateNormal];
     [self.area2 setImage:[self.imageButtons objectAtIndex:0] forState:UIControlStateNormal];
@@ -129,19 +117,11 @@
     }
     
     self.traco.hidden = true;
-
     [self.vencedor setText:[NSString stringWithFormat:@""]];
-    
-    
-    
-    
-    
 }
 
 - (IBAction)area0:(id)sender
 {
-    
-   
     if (matriz[0][0] == 0){
         [[SoundManager sharedManager] playSound:@"jogada.wav" looping:NO];
 
@@ -151,15 +131,7 @@
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area0 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex]forState:UIControlStateNormal];
     }
- 
-
-    
-    [self verMatriz];
-    
-
-
 }
-
 
 - (IBAction)area1:(id)sender
 {
@@ -170,14 +142,6 @@
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area1 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex] forState:UIControlStateNormal];
     }
-
-    
-    
-    
-    
-
- 
-
 }
 
 - (IBAction)area2:(id)sender
@@ -189,9 +153,6 @@
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area2 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex] forState:UIControlStateNormal];
     }
-
-    
-    
 }
 
 - (IBAction)area3:(id)sender
@@ -203,11 +164,6 @@
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area3 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex] forState:UIControlStateNormal];
     }
-
-    
-    
-
-
 }
 
 - (IBAction)area4:(id)sender
@@ -219,11 +175,6 @@
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area4 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex] forState:UIControlStateNormal];
     }
-
-    
-    
-
-
 }
 
 - (IBAction)area5:(id)sender
@@ -235,8 +186,6 @@
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area5 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex] forState:UIControlStateNormal];
     }
-    
-    
 }
 
 - (IBAction)area6:(id)sender
@@ -248,16 +197,6 @@
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area6 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex] forState:UIControlStateNormal];
     }
-
-    /*
-    if (_currentPlayerIndex == 1){
-        matriz[2][0] = 1;
-    } else {
-        matriz[2][0] = 2;
-    }
-     */
-    
-
 }
 
 - (IBAction)area7:(id)sender
@@ -269,7 +208,6 @@
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area7 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex] forState:UIControlStateNormal];
     }
-
 }
 
 - (IBAction)area8:(id)sender
@@ -281,11 +219,6 @@
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
         [self.area8 setImage:[self.imageButtons objectAtIndex:_currentPlayerIndex] forState:UIControlStateNormal];
     }
-
-    
-    
-
-
 }
 
 - (void) verMatriz
@@ -383,7 +316,6 @@
             return;
         }
         
-        
         // Coluna
         if ((matriz[0][i] == _currentPlayerIndex) && (matriz[1][i] == _currentPlayerIndex) && (matriz[2][i] == _currentPlayerIndex)){
             ganhou = true;
@@ -391,11 +323,9 @@
             self.traco.hidden = false;
             [self.traco setImage:self.linhas[i]];
             [self atualizaPontos];
-            
-            
+        
             return;
         }
-        
     }
     
     // Diagonal Primaria
@@ -429,26 +359,6 @@
         
     if (velha){
         [self.vencedor setText:[NSString stringWithFormat:@"Deu velha!"]];
-        
-        
-        
-        /*
-        [UIView animateWithDuration:1.0
-                              delay:0
-                            options: UIViewAnimationOptionAllowUserInteraction   |
-         UIViewAnimationOptionRepeat |
-         
-         UIViewAnimationOptionAutoreverse
-                         animations:^{
-                             
-                             _again.alpha = 0.08;
-                         }
-                         completion:^(BOOL completed) {}]; */
-        
     }
-    
-    
-   
-    
 }
 @end
