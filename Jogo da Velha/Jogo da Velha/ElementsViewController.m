@@ -7,6 +7,7 @@
 //
 
 #import "ElementsViewController.h"
+#import "SoundManager.h"
 
 @interface ElementsViewController ()
 {
@@ -64,6 +65,11 @@
     self.player = @[newX, newX2, newO, newO2];
     [self.playerX setImage:newX2];
     [self.playerO setImage:newO];
+    
+    
+    [SoundManager sharedManager].allowsBackgroundMusic = YES;
+    [[SoundManager sharedManager] prepareToPlay];
+    
 }
 
 - (void) didReceiveMemoryWarning {
@@ -121,7 +127,11 @@
 
 - (IBAction)area0:(id)sender
 {
+    
+   
     if (matriz[0][0] == 0){
+        [[SoundManager sharedManager] playMusic:@"jogada.wav" looping:NO];
+        
         matriz[0][0] = _currentPlayerIndex == 1 ? 1 : 2;
         [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
@@ -140,6 +150,7 @@
 - (IBAction)area1:(id)sender
 {
     if (matriz[0][1] == 0){
+        [[SoundManager sharedManager] playMusic:@"jogada.wav" looping:NO];
         matriz[0][1] = _currentPlayerIndex == 1 ? 1 : 2;
         [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
@@ -158,6 +169,7 @@
 - (IBAction)area2:(id)sender
 {
     if (matriz[0][2] == 0){
+        [[SoundManager sharedManager] playMusic:@"jogada.wav" looping:NO];
         matriz[0][2] = _currentPlayerIndex == 1 ? 1 : 2;
         [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
@@ -171,6 +183,7 @@
 - (IBAction)area3:(id)sender
 {
     if (matriz[1][0] == 0){
+        [[SoundManager sharedManager] playMusic:@"jogada.wav" looping:NO];
         matriz[1][0] = _currentPlayerIndex == 1 ? 1 : 2;
         [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
@@ -186,6 +199,7 @@
 - (IBAction)area4:(id)sender
 {
     if (matriz[1][1] == 0){
+        [[SoundManager sharedManager] playMusic:@"jogada.wav" looping:NO];
         matriz[1][1] = _currentPlayerIndex == 1 ? 1 : 2;
         [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
@@ -201,6 +215,7 @@
 - (IBAction)area5:(id)sender
 {
     if (matriz[1][2] == 0){
+        [[SoundManager sharedManager] playMusic:@"jogada.wav" looping:NO];
         matriz[1][2] = _currentPlayerIndex == 1 ? 1 : 2;
         [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
@@ -213,6 +228,7 @@
 - (IBAction)area6:(id)sender
 {
     if (matriz[2][0] == 0){
+        [[SoundManager sharedManager] playMusic:@"jogada.wav" looping:NO];
         matriz[2][0] = _currentPlayerIndex == 1 ? 1 : 2;
         [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
@@ -233,6 +249,7 @@
 - (IBAction)area7:(id)sender
 {
     if (matriz[2][1] == 0){
+        [[SoundManager sharedManager] playMusic:@"jogada.wav" looping:NO];
         matriz[2][1] = _currentPlayerIndex == 1 ? 1 : 2;
         [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];
@@ -257,6 +274,7 @@
 - (IBAction)area8:(id)sender
 {
     if (matriz[2][2] == 0){
+        [[SoundManager sharedManager] playMusic:@"jogada.wav" looping:NO];
         matriz[2][2] = _currentPlayerIndex == 1 ? 1 : 2;
         [self condicaoVitoria];
         _currentPlayerIndex = [self mudarJogador:_currentPlayerIndex];

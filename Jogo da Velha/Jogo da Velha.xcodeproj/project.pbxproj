@@ -11,6 +11,8 @@
 		093865391AC4928C009BB71B /* hashtag2.png in Resources */ = {isa = PBXBuildFile; fileRef = 093865381AC4928C009BB71B /* hashtag2.png */; };
 		0938653B1AC492F3009BB71B /* caderno.png in Resources */ = {isa = PBXBuildFile; fileRef = 0938653A1AC492F3009BB71B /* caderno.png */; };
 		0938653D1AC4A68E009BB71B /* caderno2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0938653C1AC4A68E009BB71B /* caderno2.png */; };
+		093865401AC4A82A009BB71B /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0938653F1AC4A82A009BB71B /* SoundManager.m */; };
+		093865421AC4AF8B009BB71B /* jogada.wav in Resources */ = {isa = PBXBuildFile; fileRef = 093865411AC4AF8B009BB71B /* jogada.wav */; };
 		09EB66F61AC47CC80027EF6C /* traco8.png in Resources */ = {isa = PBXBuildFile; fileRef = 09EB66F51AC47CC80027EF6C /* traco8.png */; };
 		09EB66FE1AC47DEB0027EF6C /* traco1.png in Resources */ = {isa = PBXBuildFile; fileRef = 09EB66F71AC47DEB0027EF6C /* traco1.png */; };
 		09EB66FF1AC47DEB0027EF6C /* traco2.png in Resources */ = {isa = PBXBuildFile; fileRef = 09EB66F81AC47DEB0027EF6C /* traco2.png */; };
@@ -50,6 +52,9 @@
 		093865381AC4928C009BB71B /* hashtag2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hashtag2.png; sourceTree = "<group>"; };
 		0938653A1AC492F3009BB71B /* caderno.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caderno.png; sourceTree = "<group>"; };
 		0938653C1AC4A68E009BB71B /* caderno2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caderno2.png; sourceTree = "<group>"; };
+		0938653E1AC4A82A009BB71B /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
+		0938653F1AC4A82A009BB71B /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
+		093865411AC4AF8B009BB71B /* jogada.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jogada.wav; sourceTree = "<group>"; };
 		09EB66F51AC47CC80027EF6C /* traco8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = traco8.png; path = ../traco8.png; sourceTree = "<group>"; };
 		09EB66F71AC47DEB0027EF6C /* traco1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = traco1.png; sourceTree = "<group>"; };
 		09EB66F81AC47DEB0027EF6C /* traco2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = traco2.png; sourceTree = "<group>"; };
@@ -124,6 +129,8 @@
 			children = (
 				44D0C78B1AC469A60024B2D8 /* ElementsViewController.h */,
 				44D0C78C1AC469A60024B2D8 /* ElementsViewController.m */,
+				0938653E1AC4A82A009BB71B /* SoundManager.h */,
+				0938653F1AC4A82A009BB71B /* SoundManager.m */,
 				44D0C78D1AC469A60024B2D8 /* ElementsViewController.xib */,
 				44D0C78E1AC469A60024B2D8 /* empty.png */,
 				44D0C78F1AC469A60024B2D8 /* hashtag.png */,
@@ -143,6 +150,7 @@
 				0938653C1AC4A68E009BB71B /* caderno2.png */,
 				093865341AC48C87009BB71B /* tictactoeSplash.jpg */,
 				09EB66F51AC47CC80027EF6C /* traco8.png */,
+				093865411AC4AF8B009BB71B /* jogada.wav */,
 				443A5EB91AC456240057623F /* AppDelegate.h */,
 				443A5EBA1AC456240057623F /* AppDelegate.m */,
 				443A5EBC1AC456240057623F /* Images.xcassets */,
@@ -270,6 +278,7 @@
 				09EB67041AC47DEB0027EF6C /* traco7.png in Resources */,
 				0938653B1AC492F3009BB71B /* caderno.png in Resources */,
 				0938653D1AC4A68E009BB71B /* caderno2.png in Resources */,
+				093865421AC4AF8B009BB71B /* jogada.wav in Resources */,
 				443A5EBD1AC456240057623F /* Images.xcassets in Resources */,
 				09EB66F61AC47CC80027EF6C /* traco8.png in Resources */,
 				09EB66FF1AC47DEB0027EF6C /* traco2.png in Resources */,
@@ -299,6 +308,7 @@
 				443A5EBB1AC456240057623F /* AppDelegate.m in Sources */,
 				44D0C7A01AC469AE0024B2D8 /* ElementsView.m in Sources */,
 				443A5EB81AC456240057623F /* main.m in Sources */,
+				093865401AC4A82A009BB71B /* SoundManager.m in Sources */,
 				44D0C7951AC469A60024B2D8 /* ElementsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
