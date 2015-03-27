@@ -107,7 +107,8 @@
 - (IBAction)resetGame:(id)sender {
     
     
-    //[_view.layer removeAllAnimations];
+
+    
     
     
     [self.area0 setImage:[self.imageButtons objectAtIndex:0] forState:UIControlStateNormal];
@@ -379,17 +380,6 @@
             [self.vencedor setText:[NSString stringWithFormat:@"Jogador %d ganhou!", _currentPlayerIndex ]];
             [self atualizaPontos];
             
-            [UIView animateWithDuration:1.0
-                                  delay:0
-                                options:(UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionAllowUserInteraction)
-                             animations:^{
-                                 
-                                 _again.alpha = 0.05;
-                             }
-                             completion:^(BOOL completed) {}];
-
-            
-
             return;
         }
         
@@ -401,14 +391,7 @@
             self.traco.hidden = false;
             [self.traco setImage:self.linhas[i]];
             [self atualizaPontos];
-            [UIView animateWithDuration:1.0
-                                  delay:0
-                                options:(UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionAllowUserInteraction)
-                             animations:^{
-                                 
-                                 _again.alpha = 0.05;
-                             }
-                             completion:^(BOOL completed) {}];
+            
             
             return;
         }
@@ -422,16 +405,7 @@
         self.traco.hidden = false;
         [self.traco setImage:self.linhas[7]];
         [self atualizaPontos];
-        [UIView animateWithDuration:1.0
-                              delay:0
-                            options: UIViewAnimationOptionAllowUserInteraction   |
-                                    UIViewAnimationOptionRepeat |
-                                    UIViewAnimationOptionAutoreverse
-                         animations:^{
-                             
-                             _again.alpha = 0.08;
-                         }
-                         completion:^(BOOL completed) {}];
+        
         return;
     }
     
@@ -442,17 +416,7 @@
         [self.traco setImage:self.linhas[6]];
         [self.vencedor setText:[NSString stringWithFormat:@"Jogador %d ganhou!", _currentPlayerIndex ]];
         [self atualizaPontos];
-        [UIView animateWithDuration:1.0
-                              delay:0
-                            options: UIViewAnimationOptionAllowUserInteraction   |
-         UIViewAnimationOptionRepeat |
-         
-         UIViewAnimationOptionAutoreverse
-                         animations:^{
-                             
-                             _again.alpha = 0.08;
-                         }
-                         completion:^(BOOL completed) {}];
+       
         return;
     }
     
@@ -465,6 +429,10 @@
         
     if (velha){
         [self.vencedor setText:[NSString stringWithFormat:@"Deu velha!"]];
+        
+        
+        
+        /*
         [UIView animateWithDuration:1.0
                               delay:0
                             options: UIViewAnimationOptionAllowUserInteraction   |
@@ -475,7 +443,7 @@
                              
                              _again.alpha = 0.08;
                          }
-                         completion:^(BOOL completed) {}];
+                         completion:^(BOOL completed) {}]; */
         
     }
     
@@ -483,11 +451,4 @@
    
     
 }
-    
-    
-    
-//            [NSString stringWithFormat:@"<%@: %d unassigned>", self.label, self.resaleValue];
-    
-
-
 @end
